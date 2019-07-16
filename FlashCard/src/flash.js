@@ -28,10 +28,10 @@ export default class detalle extends Component {
   }
 
   static navigationOptions = {
-    title: 'Detalle',
+    title: 'Nivel Bajo',
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#c0e359',
+      backgroundColor: '#355cec',
     },
 
   }
