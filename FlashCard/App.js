@@ -9,6 +9,8 @@ import { Animated, Easing, Platform } from 'react-native';
 
 import Inicio from './src/inicio'
 import flash from './src/flash'
+import flash1 from './src/flash1'
+import flash2 from './src/flash2'
 import home from './src/home'
 export function fromRight(duration = 300) {
   return {
@@ -44,6 +46,12 @@ Inicio: {
 },
 flash:{
   screen: flash
+},
+flash1:{
+  screen: flash1
+},
+flash2:{
+  screen: flash2
 },
 home:{
   screen:home
