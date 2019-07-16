@@ -53,7 +53,7 @@ export default class detalle extends Component {
             >
                 {/* Face Side */}
                 <View style={styles.card}>
-                    <Text style={{ color: '#000' }}>{item.acertijo}</Text>
+                    <Text style={{ color: '#000',textAlign:'center'}}>{item.acertijo}</Text>
                 </View>
                 {/* Back Side */}
                 <ImageBackground  source={item.imagen} style={styles.card2}>
@@ -67,12 +67,11 @@ export default class detalle extends Component {
 
     render() {
         var figures = [
-            { acertijo: "Es redondo", key: "circulo", imagen:require("./images/circulos.jpg")},
-            { acertijo: "Tiene cuatro lados iguales", key: "Cuadrado", imagen:require("./images/cuadrados.jpg")},
-            { acertijo: "es redondo", key: "triangulo" },
-            { acertijo: "es redondo", key: "circulo" },
-            { acertijo: "es redondo", key: "circulo" },
-            { acertijo: "es redondo", key: "circulo" },
+            { acertijo: "Es redondo", key: "Circulo", imagen:require("./images/circulos.jpg")},
+            { acertijo: "Tiene cuatro lados iguales con angulos rectos", key: "Cuadrado", imagen:require("./images/cuadrados.jpg")},
+            { acertijo: "Tiene 3 lados iguales", key: "Triangulo Equilatero", imagen:require("./images/triangulos.gif")},
+            { acertijo: "Tiene 2 lados de un mismo tamaño y 2 de otro tamaño", key: "Rectangulo",imagen:require("./images/rectangulos.jpg")},
+            { acertijo: "Tiene cuatro lados iguales que no forman ángulos rectos.", key: "Rombo",imagen:require("./images/rombos.jpg")},
 
         ];
         return (
@@ -106,7 +105,6 @@ const styles = StyleSheet.create({
         marginBottom:10,
         marginLeft:'2%',
         width:'96%',
-        shadowColor: "#000",
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
