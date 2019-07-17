@@ -53,11 +53,11 @@ export default class detalle extends Component {
             >
                 {/* Face Side */}
                 <View style={styles.card}>
-                    <Text style={{ color: '#000',textAlign:'center'}}>{item.acertijo}</Text>
+                    <Text style={{ color: '#000',textAlign:'center', fontSize:16}}>{item.acertijo}</Text>
                 </View>
                 {/* Back Side */}
                 <ImageBackground  source={item.imagen} style={styles.card2}>
-                    <Text style={{ color: '#000' }}>{item.key}</Text>
+                    <Text style={{ color: '#000', fontSize:25, backgroundColor:'#fff', borderRadius:5, padding:2}}>{item.key}</Text>
                 </ImageBackground>
                 
             </FlipCard>

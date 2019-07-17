@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   ListView,
   FlatList,
+  ImageBackground,
   Image
 } from 'react-native';
 import FlipCard from 'react-native-flip-card'
@@ -35,86 +36,113 @@ export default class detalle extends Component {
     },
 
   }
-
-
   renderItem = ({ item }) => {
     return (
-      <FlipCard
-        style={styles.container}
-        friction={6}
-        perspective={1000}
-        flipHorizontal={true}
-        flipVertical={false}
-        flip={false}
-        clickable={true}
-        onFlipEnd={(isFlipEnd) => { console.log('isFlipEnd', isFlipEnd) }}
-      >
-        {/* Face Side */}
-        <View style={styles.card}>
-          <Text style={{color:'#fff'}}>{item.acertijo}</Text>
-        </View>
-        {/* Back Side */}
-        <View style={styles.card}>
-          <Text style={{color:'#fff'}}>{item.key}</Text>
-        </View>
-      </FlipCard>
+        <FlipCard
+            style={styles.container}
+            friction={6}
+            perspective={1000}
+            flipHorizontal={true}
+            flipVertical={false}
+            flip={false}
+            clickable={true}
+            onFlipEnd={(isFlipEnd) => { console.log('isFlipEnd', isFlipEnd) }}
+        >
+            {/* Face Side */}
+            <View style={styles.card}>
+                <Text style={{ color: '#000',textAlign:'center', fontSize:16}}>{item.acertijo}</Text>
+            </View>
+            {/* Back Side */}
+            <ImageBackground  source={item.imagen} style={styles.card2}>
+                <Text style={{ color: '#000', fontSize:25, backgroundColor:'#fff', borderRadius:5, padding:2}}>{item.key}</Text>
+            </ImageBackground>
+            
+        </FlipCard>
 
     )
-  }
+}
 
-  render() {
+render() {
     var figures = [
-      {acertijo:"es redondo",key:"circulo"},
-      {acertijo:"es redondo",key:"ciuadrado"},
-      {acertijo:"es redondo",key:"triangulo"},
-      {acertijo:"es redondo",key:"circulo"},
-      {acertijo:"es redondo",key:"circulo"},
-      {acertijo:"es redondo",key:"circulo"},
+        { acertijo: "Tiene 2 lados y 2 ángulos iguales", key: "Triangulo Isosceles", imagen:require("./images/isoceles.png")},
+        { acertijo: "Son paralelogramos que tienen sus lados y ángulos iguales dos a dos", key: "Romboide", imagen:require("./images/romboides.png")},
+        { acertijo: "Tiene 3 lados iguales", key: "Triangulo Equilatero", imagen:require("./images/triangulos.gif")},
+        { acertijo: "Tiene 2 lados de un mismo tamaño y 2 de otro tamaño", key: "Rectangulo",imagen:require("./images/rectangulos.jpg")},
+        { acertijo: "Tiene cuatro lados iguales que no forman ángulos rectos.", key: "Rombo",imagen:require("./images/rombos.jpg")},
 
     ];
     return (
-      <View style={styles.MainContainer}>
-        <FlatList
-          data={figures}
-          renderItem={this.renderItem}
-          keyExtractor={(item, index) => index.toString()}
-        />
-      </View>
+        <View style={styles.MainContainer}>
+            <FlatList
+                data={figures}
+                renderItem={this.renderItem}
+                keyExtractor={(item, index) => index.toString()}
+            />
+        </View>
     )
 
-  }
+}
 }
 
 const styles = StyleSheet.create({
 
-  container: {
-    marginTop:25,
-  },
+MainContainer:{
+    marginTop: 0,
+},
+container: {
+    marginTop: 10,
+},
 
-  card: {
-    height:100, 
-    backgroundColor:'#000',
+card: {
+    height: 100,
+    backgroundColor: '#fff',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  cardImage: {
+    marginBottom:10,
+    marginLeft:'2%',
+    width:'96%',
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+    
+    elevation: 12,
+},
+card2: {
+    height: 100,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:10,
+    marginLeft:'2%',
+    width:'98%',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    }
+},
+cardImage: {
     width: '100%',
     height: 200,
     resizeMode: 'cover'
-  },
-  rowViewContainer: {
+},
+rowViewContainer: {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 10,
     backgroundColor: '#fff',
     color: '#000',
 
-  },
+},
 
-  cont: {
+cont: {
     color: '#000'
-  }
+}
 
 })
 
