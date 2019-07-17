@@ -80,6 +80,7 @@ export default class detalle extends Component {
                     data={figures}
                     renderItem={this.renderItem}
                     keyExtractor={(item, index) => index.toString()}
+                    numColumns={1}
                 />
             </View>
         )
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     },
 
     card: {
-        height: 100,
+        height: 150,
         backgroundColor: '#fff',
         flex: 1,
         justifyContent: 'center',
@@ -112,11 +113,10 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.37,
         shadowRadius: 7.49,
-        
         elevation: 12,
     },
     card2: {
-        height: 100,
+        height: 150,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

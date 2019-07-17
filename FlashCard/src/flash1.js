@@ -66,9 +66,10 @@ render() {
     var figures = [
         { acertijo: "Tiene 2 lados y 2 ángulos iguales", key: "Triangulo Isosceles", imagen:require("./images/isoceles.png")},
         { acertijo: "Son paralelogramos que tienen sus lados y ángulos iguales dos a dos", key: "Romboide", imagen:require("./images/romboides.png")},
-        { acertijo: "Tiene 3 lados iguales", key: "Triangulo Equilatero", imagen:require("./images/triangulos.gif")},
-        { acertijo: "Tiene 2 lados de un mismo tamaño y 2 de otro tamaño", key: "Rectangulo",imagen:require("./images/rectangulos.jpg")},
-        { acertijo: "Tiene cuatro lados iguales que no forman ángulos rectos.", key: "Rombo",imagen:require("./images/rombos.jpg")},
+        { acertijo: "Una figura del plano con cinco lados y ángulos iguales (todos sus ángulos son de 108º)", key: "Pentágono Regular", imagen:require("./images/pentagono.jpg")},
+        { acertijo: "Es una figura geométrica con seis lados y ángulos iguales (todos sus ángulos son de 120º)", key: "Hexágono regular",imagen:require("./images/hexagono.jpg")},
+        { acertijo: "Es una figura geométrica con siete lados y ángulos iguales (todos sus ángulos son de 128,6º)", key: "Heptágono regular",imagen:require("./images/heptagono.gif")},
+        { acertijo: "Es una figura del plano con ocho lados y ángulos iguales (todos sus ángulos son de 135º)", key: "Octágono regular",imagen:require("./images/octagono.png")},
 
     ];
     return (
@@ -94,7 +95,7 @@ container: {
 },
 
 card: {
-    height: 100,
+    height: 150,
     backgroundColor: '#fff',
     flex: 1,
     justifyContent: 'center',
@@ -113,7 +114,7 @@ card: {
     elevation: 12,
 },
 card2: {
-    height: 100,
+    height: 150,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
