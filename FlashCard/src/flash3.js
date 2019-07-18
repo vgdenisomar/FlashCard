@@ -29,7 +29,7 @@ export default class detalle extends Component {
   }
 
   static navigationOptions = {
-    title: 'Nivel Alto',
+    title: 'Cuerpos Geometricos',
     headerTintColor: '#ffffff',
     headerStyle: {
       backgroundColor: '#355cec',
@@ -53,6 +53,7 @@ export default class detalle extends Component {
                 <Text style={{ color: '#000',textAlign:'center', fontSize:16}}>{item.acertijo}</Text>
             </View>
             {/* Back Side */}
+
             <ImageBackground  source={item.imagen} style={styles.card2}>
                 <Text style={{ color: '#000', fontSize:25, backgroundColor:'#fff', borderRadius:5, padding:2}}>{item.key}</Text>
             </ImageBackground>
@@ -64,13 +65,16 @@ export default class detalle extends Component {
 
 render() {
     var figures = [
-        { acertijo: "Es un cuadrilátero con solo dos de sus lados paralelos.", key: "Trapecio", imagen:require("./images/trapecio.png")},
-        { acertijo: "Es una figura del plano con cinco lados pero con lados y ángulos no todos iguales.", key: "Pentágono irregular", imagen:require("./images/pentagono1.jpg")},
-        { acertijo: "Es un polígono con seis lados, siendo alguno o todos diferentes", key: "Hexágono irregular", imagen:require("./images/hexagono1.jpg")},
-        { acertijo: "Es una figura del plano con siete lados pero siendo alguno o todos ellos desiguales.", key: "Heptágono irregular",imagen:require("./images/heptagono1.jpg")},
-        { acertijo: "Es una figura geométrica con siete lados y ángulos iguales (todos sus ángulos son de 128,6º)", key: "Heptágono regular",imagen:require("./images/heptagono.gif")},
-        { acertijo: "Es una figura del plano con ocho lados y ángulos iguales (todos sus ángulos son de 135º)", key: "Octágono regular",imagen:require("./images/octagono.png")},
-
+        { acertijo: "Cuerpo geométrico de cuatro caras triangulares.", key: "Tetraedro", imagen:require("./images/tetraedro.gif")},
+        { acertijo: "Cuerpo geométrico de ocho caras triangulares.", key: "Octaedro", imagen:require("./images/octaedro.gif")},
+        { acertijo: "Cuerpo geométrico de veinte caras.", key: "Icosaedro", imagen:require("./images/icosaedro.gif")},
+        { acertijo: "Cuerpo geométrico de doce caras.", key: "Dodecaedro",imagen:require("./images/dodecaedro.gif")},
+        { acertijo: "Es un poliedro limitado por seis caras cuadradas congruentes.", key: "Cubo",imagen:require("./images/cubo.gif")},
+        { acertijo: "Es un prisma rectangular ortogonal, cuyas caras forman entre sí ángulos diedros rectos", key: "Ortoedro",imagen:require("./images/ortoedro.gif")},
+        { acertijo: "Es un prisma rectangular ortogonal, cuyas caras forman entre sí ángulos diedros rectos", key: "Ortoedro",imagen:require("./images/ortoedro.gif")},
+        { acertijo: "Es un prisma rectangular ortogonal, cuyas caras forman entre sí ángulos diedros rectos", key: "Ortoedro",imagen:require("./images/ortoedro.gif")},
+        { acertijo: "Es un prisma rectangular ortogonal, cuyas caras forman entre sí ángulos diedros rectos", key: "Ortoedro",imagen:require("./images/ortoedro.gif")},
+        { acertijo: "Es un prisma rectangular ortogonal, cuyas caras forman entre sí ángulos diedros rectos", key: "Ortoedro",imagen:require("./images/ortoedro.gif")},
     ];
     return (
         <View style={styles.MainContainer}>
@@ -78,6 +82,7 @@ render() {
                 data={figures}
                 renderItem={this.renderItem}
                 keyExtractor={(item, index) => index.toString()}
+                numColumns={2}
             />
         </View>
     )
@@ -146,4 +151,3 @@ cont: {
 }
 
 })
-
