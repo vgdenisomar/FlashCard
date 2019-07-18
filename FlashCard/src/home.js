@@ -12,6 +12,7 @@ export default class App extends Component{
           <TouchableOpacity onPress={() => this.props.navigation.navigate('flash')}><Text style={styles.signupButton}>Nivel Bajo</Text></TouchableOpacity>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('flash1')}><Text style={styles.signupButton}>Nivel Medio</Text></TouchableOpacity>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('flash2')}><Text style={styles.signupButton}>Nivel Alto</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('flash3')}><Text style={styles.signupButton}>Cuerpos geometricos</Text></TouchableOpacity>
         </View>
       );
     }

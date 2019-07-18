@@ -11,6 +11,8 @@ import Inicio from './src/inicio'
 import flash from './src/flash'
 import flash1 from './src/flash1'
 import flash2 from './src/flash2'
+import flash3 from './src/flash3'
+
 import home from './src/home'
 export function fromRight(duration = 300) {
   return {
@@ -52,6 +54,9 @@ flash1:{
 },
 flash2:{
   screen: flash2
+},
+flash3:{
+  screen: flash3
 },
 home:{
   screen:home
