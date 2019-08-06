@@ -59,7 +59,7 @@ export default class detalle extends Component {
                 <ImageBackground  source={item.imagen} style={styles.card2}>
                     <Text style={{ color: '#000', fontSize:25, backgroundColor:'#fff', borderRadius:5, padding:2}}>{item.key}</Text>
                 </ImageBackground>
-                
+
             </FlipCard>
 
         )
